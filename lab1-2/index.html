@@ -1,25 +1,124 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link href="styles.css" rel="stylesheet">
+    <link href="floating-windows.css" rel="stylesheet">
     <link href="custom-styles.css" rel="stylesheet">
     <link href="golos-font/Golos-Text_DemiBold.css">
     <title>ПЕЛЬМЕНИ</title>
 </head>
 <body>
-    <div class="always-on-top-block left-gradient"></div>
-    <div class="main-wrapper">
-        <header>
-            <h1 class="bordered-text">Пельмени...</h1>
-            <h1 class="bordered-text additional-text">И еще пельмени</h1>
-            <h1 class="bordered-text additional-additional-text">Тут тоже</h1>
-        </header>
+<div class="always-on-top-block left-gradient"></div>
 
-<!--        <footer>-->
-<!--            почему пельмени такие вкусные? В нас много мяса и мало теста-->
-<!--        </footer>-->
-    </div>
-    <div class="always-on-top-block right-gradient"></div>
+<div class="main-wrapper">
+    <header>
+        <h1 class="bordered-text">Пельмени...</h1>
+        <h1 class="bordered-text additional-text">И еще пельмени</h1>
+        <h1 class="bordered-text additional-additional-text">Тут тоже</h1>
+    </header>
+
+    <main>
+        <section class="bordered-window first-window">
+                <span class="upper__window__bar">
+                    <span class="upper__window__bar__bar_button"></span>
+                    <span class="upper__window__bar__bar_button"></span>
+                </span>
+            <div class="info">
+                <input id="ideal__pelmeni__title" class="info__switch" type="checkbox">
+                <label for="ideal__pelmeni__title" class="info__headline">Почему пельмени идеальны?</label>
+                <article class="info__body">
+                    <p>
+                        <b>Тесто</b> - невероятная по своим свойтсвам субстанция.
+                        Различная обработка данного сырья позволяет достигать совершенно неожиданных
+                        и вкусных
+                        <del>макарошек</del>
+                        резльутатов.
+                    </p>
+                    <p>
+                        Известный факт - человек ест <b>мясо</b>. Еще один известный факт - мы есть то, что мы едим.
+                        Очевидное следствие - человек на 80% состоит из <b>мяса</b> и нуждается в нем.
+                    </p>
+                    <!-- типа ем пельмени -->
+                    <p>
+                        <b><em>Пельмени</em></b> идеальный продукт - вкусно и удовлетворяет наши потребности в мясе
+                        , т.к состоят из <b>мяса</b> и <b>теста</b>.
+                        Данное сочетание делает это блюдо уникальным, неповторимым и одним из самых лучших на Земле
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="bordered-window second-window">
+                <span class="upper__window__bar">
+                    <span class="upper__window__bar__bar_button"></span>
+                    <span class="upper__window__bar__bar_button"></span>
+                </span>
+            <div class="info">
+                <input id="clickbait__title" class="info__switch" type="checkbox">
+                <label for="clickbait__title" class="info__headline">Тут нет ничего интересного</label>
+                <article class="info__body">
+                    <p>
+                        Только бесполезный код на js<br>
+                        <pre><code>
+    function squarePelmeni(pelmeniAmount) {
+        return pelmeni * pelmeni;
+    }
+                        </code></pre>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bordered-window third-window">
+                <span class="upper__window__bar">
+                    <span class="upper__window__bar__bar_button"></span>
+                    <span class="upper__window__bar__bar_button"></span>
+                </span>
+            <div class="info">
+                <input id="cooking__title" class="info__switch" type="checkbox">
+                <label for="cooking__title" class="info__headline">Как вкусно кушать пельмени?</label>
+                <article class="info__body">
+                    <p>
+                        За сотни лет существования пельменей, был придуман не один способ их пригтовления.
+                        Рассмотрим самые популярные:
+                    <ul>
+                        <li><b>Съесть сырыми</b></li>
+                        <li><b>Пожарить</b> - знатоки советуют жарить на медленном огне, на сливочном масле.</li>
+                        <li><b>Сварить</b> - 10 минут в подсоленной кипящей воде. После - употребить со
+                            сметаной/майонезом</li>
+                    </ul>
+
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+            <pre>
+          _____                    _____                    _____            _____                    _____                    _____                    _____
+         /\    \                  /\    \                  /\    \          /\    \                  /\    \                  /\    \                  /\    \
+        /::\    \                /::\    \                /::\____\        /::\____\                /::\    \                /::\____\                /::\    \
+       /::::\    \              /::::\    \              /:::/    /       /::::|   |               /::::\    \              /::::|   |                \:::\    \
+      /::::::\    \            /::::::\    \            /:::/    /       /:::::|   |              /::::::\    \            /:::::|   |                 \:::\    \
+     /:::/\:::\    \          /:::/\:::\    \          /:::/    /       /::::::|   |             /:::/\:::\    \          /::::::|   |                  \:::\    \
+    /:::/__\:::\    \        /:::/__\:::\    \        /:::/    /       /:::/|::|   |            /:::/__\:::\    \        /:::/|::|   |                   \:::\    \
+   /::::\   \:::\    \      /::::\   \:::\    \      /:::/    /       /:::/ |::|   |           /::::\   \:::\    \      /:::/ |::|   |                   /::::\    \
+  /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    /       /:::/  |::|___|______    /::::::\   \:::\    \    /:::/  |::|   | _____    ____    /::::::\    \
+ /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /:::/    /       /:::/   |::::::::\    \  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \  /\   \  /:::/\:::\    \
+/:::/  \:::\   \:::|    |/:::/__\:::\   \:::\____\/:::/____/       /:::/    |:::::::::\____\/:::/__\:::\   \:::\____\/:: /    |::|   /::\____\/::\   \/:::/  \:::\____\
+\::/    \:::\  /:::|____|\:::\   \:::\   \::/    /\:::\    \       \::/    / ~~~~~/:::/    /\:::\   \:::\   \::/    /\::/    /|::|  /:::/    /\:::\  /:::/    \::/    /
+ \/_____/\:::\/:::/    /  \:::\   \:::\   \/____/  \:::\    \       \/____/      /:::/    /  \:::\   \:::\   \/____/  \/____/ |::| /:::/    /  \:::\/:::/    / \/____/
+          \::::::/    /    \:::\   \:::\    \       \:::\    \                  /:::/    /    \:::\   \:::\    \              |::|/:::/    /    \::::::/    /
+           \::::/    /      \:::\   \:::\____\       \:::\    \                /:::/    /      \:::\   \:::\____\             |::::::/    /      \::::/____/
+            \__/____/        \:::\   \::/    /        \:::\    \              /:::/    /        \:::\   \::/    /             |:::::/    /        \:::\    \
+                              \:::\   \/____/          \:::\    \            /:::/    /          \:::\   \/____/              |::::/    /          \:::\    \
+                               \:::\    \               \:::\    \          /:::/    /            \:::\    \                  /:::/    /            \:::\    \
+                                \:::\____\               \:::\____\        /:::/    /              \:::\____\                /:::/    /              \:::\____\
+                                 \::/    /                \::/    /        \::/    /                \::/    /                \::/    /                \::/    /
+                                  \/____/                  \/____/          \/____/                  \/____/                  \/____/                  \/____/
+            </pre>
+    </footer>
+</div>
+<div class="always-on-top-block right-gradient"></div>
 </body>
 </html>

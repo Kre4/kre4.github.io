@@ -28,12 +28,11 @@
 }
 
 .additional-text {
-
     padding-left: 400px;
 }
 
 .additional-additional-text {
-    padding-left: 600px;
+    padding-left: 65%;
 }
 
 .main-wrapper {
@@ -41,6 +40,7 @@
     display: inline-block;
     padding-left: 10%;
 }
+
 
 
 .color-theme_изображение_2022-09-05_195739205-1-hex { color: #7C05F2; }

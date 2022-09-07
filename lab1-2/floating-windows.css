@@ -1,0 +1,143 @@
+.bordered-window {
+    margin: 0;
+    width: 20rem;
+    padding: .2rem;
+    background: #fff;
+    border: 2px solid var(--primary-dark);
+    border-radius: .5rem;
+}
+
+
+.first-window {
+    position: absolute;
+    top: 30%;
+    left: 4%;
+}
+
+.second-window {
+    position: relative;
+    left: 24%;
+    bottom: 60px;
+    width: fit-content;
+}
+
+.third-window {
+    position: relative;
+    left: 60%;
+}
+
+.upper__window__bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 1.5rem;
+
+    background: linear-gradient(-180deg,#39b1d4 -.04%,#865de8 52.2%);
+    border: 1px solid var(--primary-dark);
+    border-radius: .25rem .25rem 0 0;
+    gap: .1875rem
+}
+
+.upper__window__bar:before {
+    position: relative;
+    right: 55%;
+
+}
+
+.upper__window__bar__bar_button {
+    position: relative;
+    width: 1.25em;
+    height:1.25em;
+    background: white;
+    border: 1px solid var(--primary-dark);
+    border-radius: 2px;
+}
+
+.upper__window__bar__bar_button:first-child:before {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    content: "";
+    width: 70%;
+    height: 2px;
+    background: var(--primary-dark);
+    transform: translateX(-50%);
+}
+
+.upper__window__bar__bar_button:last-child:after,
+.upper__window__bar__bar_button:last-child:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 70%;
+    height: 2px;
+    background: var(--primary-dark);
+}
+
+.upper__window__bar__bar_button:last-child:after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.upper__window__bar__bar_button:last-child:before {
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.upper__window__bar, :before, :after {
+    box-sizing: border-box;
+
+}
+
+
+
+.info {
+    background-color: #f9f9ff;
+    padding: 10px 25px;
+}
+
+.info__switch {
+    display: none;
+}
+
+.info__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.info__switch:checked~.info__body {
+    max-height: fit-content;
+}
+
+
+.info__switch:checked~.info__headline::before {
+    transform: rotate(180deg) translateY(6px);
+}
+
+
+.info__headline::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    font-size: 4em;
+    border: 6px solid var(--primary-dark);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.info__headline {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    user-select: none;
+    color: var(--primary-dark);
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.info__headline:hover {
+    text-decoration: underline;
+}

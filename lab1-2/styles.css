@@ -1,20 +1,37 @@
 :root {
     --headers-font: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --primary-dark: #1d1d1b;
 }
 
-html {
+html, body {
     height: 100%;
 }
 
 body {
     margin: 0;
-    height: 100%;
+    text-rendering: optimizelegibility;
 }
 
-header {
+body, html {
+    height: 100%;
+    font-family: Golos, system-ui;
+    background: #fff;
+}
+
+header, footer {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+main {
+    padding: 20px;
+}
+/*main {*/
+/*    margin-left: 20px;*/
+/*    margin-right: 20px;*/
+/*    border: 1px #0D0D0D solid;*/
+/*}*/
+
 
 /*main {*/
 /*    overflow-y: auto; <!-- проверить -->*/
@@ -28,12 +45,30 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 5rem;
-    line-height: 0.6;
+    font-size: 5em;
+    line-height: 0.9;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2em;
 }
+
+
+code {
+    font-family: "Courier New", "Courier", monospace;
+    color: #6a2cce;
+    padding-left: 3px;
+    border: var(--primary-dark);
+}
+
+footer {
+    text-align: center;
+    overflow-x: scroll;
+}
+footer > pre {
+    display: inline-block;
+    text-align: left;
+}
+
 
 
