@@ -41,10 +41,26 @@
     padding-left: 10%;
 }
 
+.gallery-container {
+    padding-top: 100px;
+    text-align: center;
+}
 
+.gallery__header {
+    text-align: center;
+    line-height: 1.1;
+}
 
-.color-theme_изображение_2022-09-05_195739205-1-hex { color: #7C05F2; }
-.color-theme_изображение_2022-09-05_195739205-2-hex { color: #0CC8F2; }
-.color-theme_изображение_2022-09-05_195739205-3-hex { color: #B9F23D; }
-.color-theme_изображение_2022-09-05_195739205-4-hex { color: #F25D50; }
-.second-color { color: #0D0D0D; }
+.images-container {
+    display: inline-block;
+    max-width: 1000px;
+
+    overflow-x: scroll;
+    white-space:nowrap;
+}
+
+.image {
+    padding: 10px;
+    max-height: 400px;
+    max-width: 400px;
+}
