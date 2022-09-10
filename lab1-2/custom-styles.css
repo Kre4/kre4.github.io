@@ -59,6 +59,12 @@
     white-space:nowrap;
 }
 
+.image-container {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px 20px;
+}
+
 .image {
     padding: 10px;
     max-height: 400px;
