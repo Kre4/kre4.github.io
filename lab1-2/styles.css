@@ -41,17 +41,9 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
     text-transform: uppercase;
     overflow-wrap: break-word;
-}
-
-h1 {
     font-size: 5em;
     line-height: 0.9;
 }
-
-h3 {
-    font-size: 2em;
-}
-
 
 code {
     font-family: "Courier New", "Courier", monospace;
