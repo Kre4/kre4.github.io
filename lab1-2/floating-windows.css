@@ -9,9 +9,10 @@
 
 
 .first-window {
-    position: absolute;
-    top: 30%;
+    position: relative;
+    bottom: 140px;
     left: 4%;
+    z-index: 100;
 }
 
 .second-window {
@@ -20,11 +21,13 @@
     bottom: 60px;
     width: fit-content;
     min-width: 460px;
+    z-index: 100;
 }
 
 .third-window {
     position: relative;
     left: 60%;
+    z-index: 100;
 }
 
 .upper__window__bar {

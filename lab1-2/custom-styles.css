@@ -4,6 +4,7 @@
     overflow: hidden;
     width: 10%;
     position: fixed;
+    z-index: 50;
 }
 
 .left-gradient {
@@ -13,6 +14,7 @@
 
 .right-gradient {
     background: linear-gradient(to bottom, #9330AA 20%, #4F2558 50%, #1D1D1B 100%) no-repeat left top;
+    right: 0;
     float: right;
 }
 
@@ -39,6 +41,7 @@
     width: 80%;
     display: inline-block;
     padding-left: 10%;
+    padding-right: 10%;
 }
 
 .gallery-container {
@@ -53,8 +56,7 @@
 
 .images-container {
     display: inline-block;
-    max-width: 1000px;
-
+    width: 70%;
     overflow-x: scroll;
     white-space:nowrap;
 }
