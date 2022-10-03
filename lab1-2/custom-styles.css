@@ -20,9 +20,7 @@
 
 .bordered-text {
     color: #fff;
-    mix-blend-mode: luminosity;
     text-shadow: -2px -2px 0 #1d1d1b, 2px -2px 0 #1d1d1b, -2px 2px 0 #1d1d1b, 2px 2px 0 #1d1d1b;
-
 }
 
 .bordered-text::after {
@@ -71,4 +69,12 @@
     padding: 10px;
     max-height: 400px;
     max-width: 400px;
+}
+
+.cursive-text {
+    font-style: italic;
+}
+
+.underlined-text {
+    text-decoration: underline;
 }
