@@ -28,7 +28,7 @@ main {
 
 
 h1, h2, h3, h4, h5 {
-    letter-spacing: normal; <!-- :) -->
+    letter-spacing: normal;
     font-family: var(--headers-font);
     font-weight: 700;
     text-transform: uppercase;
