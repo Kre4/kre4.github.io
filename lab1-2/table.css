@@ -1,11 +1,7 @@
 table {
-    min-width: 90%;
     width: auto;
     margin: auto;
-    /*flex: 1;*/
     display: grid;
-
-    /* These are just initial values which are overriden using JavaScript when a column is resized */
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
@@ -27,7 +23,6 @@ th {
     top: 0;
     background: linear-gradient(-180deg,#39b1d4 -.04%,#865de8 52.2%);
     text-align: center;
-    font-size: 1.1rem;
     color: white;
     position: relative;
 }
@@ -36,18 +31,17 @@ th:last-child {
     border: 0;
 }
 
+td:first-child{
+
+}
+
 tr:nth-child(even) td {background: #EEE}
 tr:nth-child(odd) td {background: #FFF}
-
-
-th:hover .resize-handle {
-    opacity: 0.3;
-}
 
 td {
     padding-top: 10px;
     text-align: center;
     padding-bottom: 10px;
-    color: #808080;
+    color: #505050;
 }
 
