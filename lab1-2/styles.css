@@ -65,9 +65,9 @@ code {
 
 footer {
     text-align: center;
-    overflow-x: scroll;
 }
 footer > pre {
+    overflow-x: scroll;
     display: inline-block;
     text-align: left;
 }
