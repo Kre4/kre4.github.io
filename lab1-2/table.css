@@ -1,0 +1,47 @@
+table {
+    width: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    top: 0;
+    background: linear-gradient(-180deg,#39b1d4 -.04%,#865de8 52.2%);
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+th:last-child {
+    border: 0;
+}
+
+td:first-child{
+
+}
+
+tr:nth-child(even) td {background: #EEE}
+tr:nth-child(odd) td {background: #FFF}
+
+td {
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #505050;
+}
+

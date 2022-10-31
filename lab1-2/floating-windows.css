@@ -30,6 +30,20 @@
     z-index: 100;
 }
 
+@media screen and (max-width: 820px){
+    .first-window {
+        position: relative;
+        bottom: 80px;
+        left: 4%;
+        z-index: 100;
+    }
+    .third-window {
+        position: relative;
+        left: 4%;
+        z-index: 100;
+    }
+}
+
 .upper__window__bar {
     display: flex;
     align-items: center;

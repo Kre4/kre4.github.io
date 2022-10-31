@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="пельмени, пельмеши, тесто и мясо, пельмен">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet">
     <link href="floating-windows.css" rel="stylesheet">
     <link href="custom-styles.css" rel="stylesheet">
+    <link href="table.css" rel="stylesheet">
     <link href="golos-font/Golos-Text_DemiBold.css">
     <title>ПЕЛЬМЕНИ</title>
 </head>
 <body>
+<div class="costil"></div>
 <div class="always-on-top-block left-gradient"></div>
-
+<div class="always-on-top-block right-gradient"></div>
 <div class="main-wrapper">
     <header>
-        <h1 class="bordered-text">Пельмени...</h1>
-        <h2 class="bordered-text additional-text">И еще пельмени</h2>
-        <h3 class="bordered-text additional-additional-text">Тут тоже</h3>
+        <h1 id="h1-title" class="bordered-text">Пельмени...</h1>
+        <h2 id="h2-title" class="bordered-text additional-text">И еще пельмени</h2>
+        <h3 id="h3-title" class="bordered-text additional-additional-text">Тут тоже</h3>
     </header>
 
     <main>
@@ -42,24 +45,6 @@
                         <b class="cursive-text">Пельмени</b> идеальный продукт - вкусно и удовлетворяет наши потребности в мясе
                         , т.к состоят из <b>мяса</b> и <b>теста</b>.
                         Данное сочетание делает это блюдо уникальным, неповторимым и одним из самых лучших на Земле
-                </details>
-            </div>
-        </section>
-        <section class="bordered-window second-window">
-                <span class="upper__window__bar">
-                    <span class="upper__window__bar__bar_button"></span>
-                    <span class="upper__window__bar__bar_button"></span>
-                </span>
-            <div class="info">
-                <details>
-                    <summary>Тут нет ничего интересного</summary>
-                    <p>
-                        Только бесполезный код на js<br>
-                    <pre><code>
-function squarePelmeni(pelmeniAmount) {
-    return pelmeniAmount * pelmeniAmount;
-}
-                        </code></pre>
                 </details>
             </div>
         </section>
@@ -103,9 +88,51 @@ function squarePelmeni(pelmeniAmount) {
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="table-container">
+            <h2 class="bordered-text gallery__header">Сводка по пельменям</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th data-type="text-short">Марка</th>
+                    <th data-type="text-short">Цена за кг</th>
+                    <th data-type="text-short">Оценка критиков</th>
+                    <th data-type="text-short">Оценка любителей</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Дымов</td>
+                    <td>344</td>
+                    <td>3/10</td>
+                    <td>6/10</td>
+                </tr>
+                <tr>
+                    <td>Папа может</td>
+                    <td>311</td>
+                    <td>9/10</td>
+                    <td>6/10</td>
+                </tr>
+                <tr>
+                    <td>Ермолино</td>
+                    <td>153</td>
+                    <td>5/10</td>
+                    <td>5/10</td>
+                </tr>
+                <tr>
+                    <td>Цезарь Nero</td>
+                    <td>423</td>
+                    <td>10/10</td>
+                    <td>10/10</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
     </main>
     <footer>
-            <pre>
+            <pre id="footer-ascii">
           _____                    _____                    _____            _____                    _____                    _____                    _____
          /\    \                  /\    \                  /\    \          /\    \                  /\    \                  /\    \                  /\    \
         /::\    \                /::\    \                /::\____\        /::\____\                /::\    \                /::\____\                /::\    \
@@ -130,6 +157,5 @@ function squarePelmeni(pelmeniAmount) {
             </pre>
     </footer>
 </div>
-<div class="always-on-top-block right-gradient"></div>
 </body>
 </html>
