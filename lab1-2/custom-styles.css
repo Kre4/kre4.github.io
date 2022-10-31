@@ -10,6 +10,7 @@
 .left-gradient {
     background: linear-gradient(to bottom, #F28965 20%, #9014E9 50%, #912BB4 100%) no-repeat left top;
     float: left;
+    left: 0;
 }
 
 .right-gradient {
@@ -40,6 +41,8 @@
     display: inline-block;
     padding-left: 10%;
     padding-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gallery-container {

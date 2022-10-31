@@ -37,9 +37,6 @@ header, footer {
     }
 }
 
-main {
-    padding: 20px;
-}
 
 
 h1, h2, h3, h4, h5 {
@@ -54,6 +51,10 @@ h1, h2, h3, h4, h5 {
 
 p {
     text-indent: 20px;
+}
+
+details {
+    font-size: 1.2em;
 }
 
 code {
