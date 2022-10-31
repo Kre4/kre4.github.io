@@ -37,8 +37,8 @@
 }
 
 .main-wrapper {
-    width: 80%;
-    display: inline-block;
+    max-width: 80%;
+    /*display: inline-block;*/
     padding-left: 10%;
     padding-right: 10%;
     margin-left: auto;
@@ -129,4 +129,9 @@
         align-items: center;
         flex-direction: column-reverse;
     }
+}
+
+.costil {
+    width: 10%;
+    display: inline-block;
 }
