@@ -178,3 +178,7 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+.nav-pan p:hover {
+    color: #dddddd;
+}
