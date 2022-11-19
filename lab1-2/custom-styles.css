@@ -152,3 +152,30 @@
     background: #1D1D1B;
     padding-right: 10%;
 }
+
+.nav-pan {
+    display: none;
+}
+@media screen and (min-width: 1490px) {
+    .nav-pan {
+        display: unset;
+        position: fixed;
+        z-index: 5000;
+        border-color: #6a2cce;
+        width: 140px;
+        top: 10px;
+        border-style: solid;
+        border-radius: 16px;
+        left: 1px;
+    }
+
+
+    .nav-pan p {
+        font-family: 'Roboto', sans-serif;
+        /*text-shadow: rgb(29, 29, 27) 1px 0px 0px, rgb(29, 29, 27) 0.540302px 0.841471px 0px, rgb(29, 29, 27) -0.416147px 0.909297px 0px, rgb(29, 29, 27) -0.989992px 0.14112px 0px, rgb(29, 29, 27) -0.653644px -0.756802px 0px, rgb(29, 29, 27) 0.283662px -0.958924px 0px, rgb(29, 29, 27) 0.96017px -0.279415px 0px;*/
+        color: white;
+        text-shadow: rgb(58, 49, 65) 2px 0px 0px, rgb(58, 49, 65) 1.75517px 0.958851px 0px, rgb(58, 49, 65) 1.0806px 1.68294px 0px, rgb(58, 49, 65) 0.141474px 1.99499px 0px, rgb(58, 49, 65) -0.832294px 1.81859px 0px, rgb(58, 49, 65) -1.60229px 1.19694px 0px, rgb(58, 49, 65) -1.97998px 0.28224px 0px, rgb(58, 49, 65) -1.87291px -0.701566px 0px, rgb(58, 49, 65) -1.30729px -1.5136px 0px, rgb(58, 49, 65) -0.421592px -1.95506px 0px, rgb(58, 49, 65) 0.567324px -1.91785px 0px, rgb(58, 49, 65) 1.41734px -1.41108px 0px, rgb(58, 49, 65) 1.92034px -0.558831px 0px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
