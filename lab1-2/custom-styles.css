@@ -179,6 +179,7 @@
     cursor: pointer;
 }
 
+.nav-pan p.hover,
 .nav-pan p:hover {
     color: #dddddd;
 }
