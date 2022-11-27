@@ -183,3 +183,13 @@
 .nav-pan p:hover {
     color: #dddddd;
 }
+.form-container {
+    padding: 60px 0 10px 0;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.filter-form {
+    scale: 1.4;
+
+}

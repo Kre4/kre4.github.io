@@ -7,6 +7,7 @@
 
     <script src="scripts/time-load-component.js"></script>
     <script src="scripts/nav-selector.js"></script>
+    <script src="scripts/pelmeni-form-filter.js"></script>
 
     <link href="styles.css" rel="stylesheet">
     <link href="floating-windows.css" rel="stylesheet">
@@ -21,8 +22,8 @@
 <div class="always-on-top-block left-gradient"></div>
 <div class="always-on-top-block right-gradient"></div>
 <div class="nav-pan">
-    <p id="main-page-nav" >Главная</p>
-    <p id="second-page-nav" >НеГлавная</p>
+    <p id="main-page-nav">Главная</p>
+    <p id="second-page-nav">НеГлавная</p>
 </div>
 <div class="main-wrapper">
     <header>
@@ -30,6 +31,49 @@
         <h3 id="h3-title" class="bordered-text additional-additional-text">Революционно кривая верстка и нечитаемый
             текст</h3>
     </header>
+
+    <div class="form-container">
+        <form id='pelmeni-form' class="filter-form">
+            <fieldset>
+                <legend>Давайте подберем вам пельмени на вечер!</legend>
+
+                <label>Фильтр по названию марки: <input id="brand-input" name="pelmenu-brand"
+                                                        autocomplete="pelmenu-brand"/></label>
+                <p></p>
+                Стоимость:
+                <p>
+                    <label><input type="radio" name="cost" value="1"/>Подороже</label>
+                    <label><input type="radio" name="cost" value="-1"/>Подешевле</label>
+                    <label><input type="radio" name="cost" value="0"/>Не важно</label>
+                </p>
+                Народный рейтинг:
+                <p>
+                    <label><input type="radio" name="rate" value="1"/>Высокий</label>
+                    <label><input type="radio" name="rate" value="-1"/>Низкий</label>
+                    <label><input type="radio" name="rate" value="0"/>Не важно</label>
+                </p>
+                <button id="submit-form">Найти!</button>
+            </fieldset>
+        </form>
+
+        <div id="filtered-result" class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th data-type="text-short">Марка</th>
+                    <th data-type="text-short">Цена за кг</th>
+                    <th data-type="text-short">Оценка критиков</th>
+                    <th data-type="text-short">Оценка любителей</th>
+                </tr>
+                </thead>
+                <tbody id="table-content">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <p></p>
 </div>
 <footer>
     <p id="load-time"></p>
