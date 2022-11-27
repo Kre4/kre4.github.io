@@ -8,18 +8,22 @@ function highlightElement(element) {
 
 document.addEventListener('DOMContentLoaded', _ => {
 
-    const dict = {
+    const pageMap = {
         'index2.html': 'second-page-nav',
         'index.html': 'main-page-nav',
     };
-    const activePageId = dict[document.location.pathname.split('/').pop()];
+
+    let activePageId = pageMap[document.location.pathname.split('/').pop()];
+    if (!activePageId)
+        activePageId = 'main-page-nav';
     const navElement = document.getElementById(activePageId);
+
     highlightElement(navElement);
 
-    document.getElementById(dict["index.html"]).onclick = function () {
+    document.getElementById(pageMap["index.html"]).onclick = function () {
         location.href = "./index.html";
     }
-    document.getElementById(dict["index2.html"]).onclick = function () {
+    document.getElementById(pageMap["index2.html"]).onclick = function () {
         location.href = "./index2.html";
     }
 
