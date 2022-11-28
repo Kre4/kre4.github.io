@@ -1,18 +1,18 @@
 function highlightElement(element) {
     element.classList.add('selected');
 }
-
+const pageMap = {
+    'index2.html': 'second-page-nav',
+    'index.html': 'main-page-nav',
+};
 document.addEventListener('DOMContentLoaded', _ => {
 
-    const pageMap = {
-        'index2.html': 'second-page-nav',
-        'index.html': 'main-page-nav',
-    };
+    const nav = document.getElementById('nav-side-bar');
 
-    let activePageId = pageMap[document.location.pathname.split('/').pop()];
-    if (!activePageId)
-        activePageId = 'main-page-nav';
-    const navElement = document.getElementById(activePageId);
-
-    highlightElement(navElement);
+    for (const child of nav.children) {
+        if (child.pathname === document.location.pathname) {
+            highlightElement(child);
+            break;
+        }
+    }
 });
