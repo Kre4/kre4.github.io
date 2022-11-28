@@ -7,6 +7,11 @@
     }
 
     window.onload = function () {
+        console.log('Window load listener','Loaded in ' + (new Date().getTime() - startTime) / 1000 + ' seconds')
         timer();
     }
+
+    document.addEventListener('DOMContentLoaded', _ => {
+        console.log('Dom listener','Loaded in ' + (new Date().getTime() - startTime) / 1000 + ' seconds')
+    })
 })();
