@@ -170,7 +170,8 @@
 }
 
 
-.nav-pan p {
+.nav-pan a {
+    text-indent: 20px;
     font-family: 'Roboto', sans-serif;
     /*text-shadow: rgb(29, 29, 27) 1px 0px 0px, rgb(29, 29, 27) 0.540302px 0.841471px 0px, rgb(29, 29, 27) -0.416147px 0.909297px 0px, rgb(29, 29, 27) -0.989992px 0.14112px 0px, rgb(29, 29, 27) -0.653644px -0.756802px 0px, rgb(29, 29, 27) 0.283662px -0.958924px 0px, rgb(29, 29, 27) 0.96017px -0.279415px 0px;*/
     color: white;
@@ -179,10 +180,11 @@
     cursor: pointer;
 }
 
-.nav-pan p.hover,
-.nav-pan p:hover {
+.nav-pan a.hover,
+.nav-pan a:hover {
     color: #dddddd;
 }
+
 .form-container {
     padding: 60px 0 10px 0;
     width: 60%;
