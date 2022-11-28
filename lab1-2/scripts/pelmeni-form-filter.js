@@ -93,25 +93,16 @@
         tbody.innerHTML = '';
 
         filteredData.forEach(description => {
-            const tr = document.createElement('tr');
+            const tbody = document.querySelector("tbody");
+            const template = document.querySelector('#pelmenirow');
+            const clone = template.content.cloneNode(true);
+            let td = clone.querySelectorAll("td");
+            td[0].textContent = description.name;
+            td[1].textContent = description.price;
+            td[2].textContent = description.professionalRating;
+            td[3].textContent = description.publicRating;
 
-            const tdName = document.createElement('td');
-            tdName.appendChild(document.createTextNode(description.name));
-            tr.appendChild(tdName);
-
-            const tdPrice = document.createElement('td');
-            tdPrice.appendChild(document.createTextNode(description.price));
-            tr.appendChild(tdPrice);
-
-            const tdProfRate = document.createElement('td');
-            tdProfRate.appendChild(document.createTextNode(description.professionalRating));
-            tr.appendChild(tdProfRate);
-
-            const tdPublicRate = document.createElement('td');
-            tdPublicRate.appendChild(document.createTextNode(description.publicRating));
-            tr.appendChild(tdPublicRate);
-
-            tbody.appendChild(tr);
+            tbody.appendChild(clone);
         });
         document.getElementById('filtered-result').style.display = 'block';
     }
