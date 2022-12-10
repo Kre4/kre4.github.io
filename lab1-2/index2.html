@@ -8,12 +8,14 @@
     <script src="scripts/time-load-component.js"></script>
     <script src="scripts/nav-selector.js"></script>
     <script src="scripts/pelmeni-form-filter.js"></script>
+    <script src="scripts/http-requests.js"></script>
 
     <link href="styles.css" rel="stylesheet">
     <link href="floating-windows.css" rel="stylesheet">
     <link href="custom-styles.css" rel="stylesheet">
     <link href="table.css" rel="stylesheet">
     <link href="golos-font/Golos-Text_DemiBold.css">
+    <link href="spinner.css" rel="stylesheet">
 
     <title>ПЕЛЬМЕНИ 2.0</title>
 </head>
@@ -56,29 +58,33 @@
             </fieldset>
         </form>
 
-        <div id="filtered-result" class="table-container">
-            <table>
-                <thead>
-                <tr>
-                    <th data-type="text-short">Марка</th>
-                    <th data-type="text-short">Цена за кг</th>
-                    <th data-type="text-short">Оценка критиков</th>
-                    <th data-type="text-short">Оценка любителей</th>
-                </tr>
-                </thead>
-                <tbody id="table-content">
+        <div class="table-container">
+            <div id="http-request-placeholder" class="hided"></div>
+            <span id="http-error-placeholder" class="hided">⚠ Что-то пошло не так</span>
+            <div id="filtered-result">
+                <table>
+                    <thead>
+                    <tr>
+                        <th data-type="text-short">Марка</th>
+                        <th data-type="text-short">Цена за кг</th>
+                        <th data-type="text-short">Оценка критиков</th>
+                        <th data-type="text-short">Оценка любителей</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-content">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-            <template id="pelmenirow">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </template>
+                <template id="pelmenirow">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </template>
+            </div>
         </div>
 
     </div>

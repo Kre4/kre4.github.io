@@ -8,7 +8,7 @@
         }
     }
 
-    const data = [
+    const dataForVeryBadTimes = [
         new PelmeniDecription('Дымов', 344, 3, 6),
         new PelmeniDecription('Папа может', 311, 9, 6),
         new PelmeniDecription('Ермолино', 153, 5, 5),
@@ -48,11 +48,36 @@
     function listenDataSubmit() {
         document.getElementById('submit-form').onclick = function (event) {
             event.preventDefault();
-            filterData()
+            requestAndProcessPelmeniData()
         }
     }
 
-    function filterData() {
+    function requestAndProcessPelmeniData() {
+        document.getElementById('filtered-result').style.display = 'none';
+        startLoadingAnimation()
+        getPelmeniData().then(successResult => filterData(successResult), error => onError(error))
+            .finally(() => stopLoadingAnimation())
+    }
+
+    function onError(error) {
+        document.getElementById('http-error-placeholder').style.display = 'unset';
+    }
+
+    function startLoadingAnimation() {
+        document.getElementById('http-error-placeholder').style.display = 'none'
+        const elem = document.getElementById('http-request-placeholder');
+        elem.className = ''
+        elem.classList.add('loader')
+    }
+
+    function stopLoadingAnimation() {
+        const elem = document.getElementById('http-request-placeholder');
+        elem.className = ''
+        elem.classList.add('hided');
+    }
+
+    function filterData(data) {
+        console.log(data)
         let filteredData = data;
 
         let brandName = document.getElementById('brand-input').value;
@@ -92,19 +117,21 @@
         const tbody = document.getElementById('table-content');
         tbody.innerHTML = '';
 
-        filteredData.forEach(description => {
-            const tbody = document.querySelector("tbody");
-            const template = document.querySelector('#pelmenirow');
-            const clone = template.content.cloneNode(true);
-            let td = clone.querySelectorAll("td");
-            td[0].textContent = description.name;
-            td[1].textContent = description.price;
-            td[2].textContent = description.professionalRating;
-            td[3].textContent = description.publicRating;
+        if (filteredData && filteredData.length > 0) {
+            filteredData.forEach(description => {
+                const tbody = document.querySelector("tbody");
+                const template = document.querySelector('#pelmenirow');
+                const clone = template.content.cloneNode(true);
+                let td = clone.querySelectorAll("td");
+                td[0].textContent = description.name;
+                td[1].textContent = description.price;
+                td[2].textContent = description.professionalRating;
+                td[3].textContent = description.publicRating;
 
-            tbody.appendChild(clone);
-        });
-        document.getElementById('filtered-result').style.display = 'block';
+                tbody.appendChild(clone);
+            });
+            document.getElementById('filtered-result').style.display = 'block';
+        }
     }
 
     function controlRadioButtonsFilter() {
@@ -135,14 +162,13 @@
     function disableDefaultFormSubmit() {
         document.getElementById('filtered-result').style.display = 'none';
         document.getElementById('pelmeni-form').addEventListener('keyup keypress', function (e) {
-            var keyCode = e.keyCode || e.which;
+            let keyCode = e.keyCode || e.which;
             if (keyCode === 13) {
                 e.preventDefault();
-                filterData();
+                requestAndProcessPelmeniData()
             }
         })
     }
-
 
     document.addEventListener('DOMContentLoaded', _ => {
         restorePreviousRequest();
