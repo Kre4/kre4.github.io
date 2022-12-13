@@ -1,2 +1,2 @@
 # ITMO web labs
-[лаба тут](https://kre4.github.io/lab1-2/)
+[лаба тут](https://kre4.github.io/lab1-2/index.html)

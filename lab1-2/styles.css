@@ -92,3 +92,8 @@ img {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+
+.selected {
+    color: #9f6fFf !important;
+    font-size: 20px !important;
+}
