@@ -60,6 +60,7 @@
     }
 
     function onError(error) {
+        console.log(error)
         document.getElementById('http-error-placeholder').style.display = 'unset';
     }
 
@@ -77,7 +78,13 @@
     }
 
     function filterData(data) {
-        console.log(data)
+        data.arrayBuffer().then(tmp => {
+                console.log(tmp);
+            }
+        )
+
+
+        return;
         let filteredData = data;
 
         let brandName = document.getElementById('brand-input').value;
