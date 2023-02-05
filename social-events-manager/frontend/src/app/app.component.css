@@ -1,0 +1,19 @@
+.tabs-container {
+  align-items: center;
+}
+
+::ng-deep .mat-tab-label {
+  font-weight: 600;
+  /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
+  color: #333;
+  font-size: 18px;
+  border-radius: 30px;
+  width: 200px;
+}
+
+::ng-deep .mat-tab-label.mat-tab-label-active{
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background: linear-gradient(217deg, #90e0ff, #a960ee,  #ff333d);
+  opacity: 1;
+}
