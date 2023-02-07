@@ -1,6 +1,8 @@
 <mat-tab-group [disableRipple]="true" class="tabs-container">
   <mat-tab label="Я участвую">
-    Content for "Я участвую" tab
+    <ng-template matTabContent>
+      <app-event-card [eventName]="'boba'"></app-event-card>
+    </ng-template>
   </mat-tab>
   <mat-tab label="Я организую">
     Content for "Я организую" tab
